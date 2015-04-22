@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Word Scramble</title>
+</head>
+<body>
+    <h1>A Javascript Word Scramble Game</h1>
+
+    <script>
+        var WORDS     = ["booger", "apple", "hackbright", "mango"];
+        var SCRAMBLED = ["oogreb", "papel", "backrhight", "goman"];
+
+        var playing = true;
+
+
+        while (playing) {
+            // 2. Math.random() - picks a floating point number from 0 - .999999 and then we want this number to be assigned to a key and return this random key
+
+        // return rand_num = Math.random();
+        // rand_num is returned a 
+
+            var getRandomIn = Math.floor(Math.random() * WORDS.length);   
+                console.log(getRandomIn);
+            // var rand_num = 
+            // // Grab a random word from the WORDS array
+            // // associate using rand_num
+            // WORDS[rand_num]
+            // SCRAMBLED[rand_num]
+            // // 3. Grab the corresponding scrambled word from the SCRAMBLED array
+            // //Select random "value" aka scrambled word
+
+            // 4. prompt the user to guess the original word when given the scrambled word
+            window.alert("Guess the original word if our word is:  " + SCRAMBLED[getRandomIn]);
+
+            var guess = window.prompt("What is your guess?");
+            if (guess.toLowerCase() === WORDS[getRandomIn]) {
+                window.alert("Yay! CONGRATULATIONS! YOU ARE AN AWESOME SPELLER!"); 
+            }
+            else {
+                guess.toLowerCase() != WORDS[getRandomIn];
+                window.alert("Here is the right word:  " + WORDS[getRandomIn])
+            }
+             //"Guess the original word if scrambled word is" + SCRAMBLED[rand_num]
+            // 5. uses prompt() to get the user's guess
+            // var result - Window.prompt(text, value);
+            //result is the str containing the text entered by the user or the value null
+            //txt is a str of text to display to user - optional
+            //value is a str containing the default value displaed in the text input field it is optional 
+            // Compare the guess to the original (in var words) =>>
+            // If the user guesses wrong, tell them they were wrong 6. alert() and the right word.
+            
+            // 7. compare the guess to the original, unscrambled word - did they get it right?
+            // 7.If the user guesses the correct word, congratulate them.
+
+            playing = window.confirm("Press OK To keep playing or Cancel to quit");
+
+            // What does confirm() return?
+            // What does setting the playing variable do?
+        }
+        alert("goodbye!");
+    </script>
+    
+</body>
+</html>
